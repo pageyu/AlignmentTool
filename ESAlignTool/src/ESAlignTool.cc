@@ -274,6 +274,56 @@ void ESAlignTool::initAllPara(const edm::ParameterSet& iConfig)
     ESmR_residualX=f->make<TH1D>("ESmR_residualX","ES-Rear residualX",3000,-15,15);
     ESmR_residualY=f->make<TH1D>("ESmR_residualY","ES-Rear residualY",3000,-15,15);
 
+    ESpF_residualXright=f->make<TH1D>("ESpF_residualXright","ES+Front residualX",3000,-15,15);
+    ESpR_residualYright=f->make<TH1D>("ESpR_residualYright","ES+Rear residualY",3000,-15,15);
+    ESmF_residualXright=f->make<TH1D>("ESmF_residualXright","ES-Front residualX",3000,-15,15);
+    ESmR_residualYright=f->make<TH1D>("ESmR_residualYright","ES-Rear residualY",3000,-15,15);
+
+    ESpF_residualXleft=f->make<TH1D>("ESpF_residualXleft","ES+Front residualX",3000,-15,15);
+    ESpR_residualYleft=f->make<TH1D>("ESpR_residualYleft","ES+Rear residualY",3000,-15,15);
+    ESmF_residualXleft=f->make<TH1D>("ESmF_residualXleft","ES-Front residualX",3000,-15,15);
+    ESmR_residualYleft=f->make<TH1D>("ESmR_residualYleft","ES-Rear residualY",3000,-15,15);
+
+    ESpF_residualXup=f->make<TH1D>("ESpF_residualXup","ES+Front residualX",3000,-15,15);
+    ESpR_residualYup=f->make<TH1D>("ESpR_residualYup","ES+Rear residualY",3000,-15,15);
+    ESmF_residualXup=f->make<TH1D>("ESmF_residualXup","ES-Front residualX",3000,-15,15);
+    ESmR_residualYup=f->make<TH1D>("ESmR_residualYup","ES-Rear residualY",3000,-15,15);
+
+    ESpF_residualXdown=f->make<TH1D>("ESpF_residualXdown","ES+Front residualX",3000,-15,15);
+    ESpR_residualYdown=f->make<TH1D>("ESpR_residualYdown","ES+Rear residualY",3000,-15,15);
+    ESmF_residualXdown=f->make<TH1D>("ESmF_residualXdown","ES-Front residualX",3000,-15,15);
+    ESmR_residualYdown=f->make<TH1D>("ESmR_residualYdown","ES-Rear residualY",3000,-15,15);
+
+    ESpF_2DhitsX=f->make<TH2D>("ESpF_2DhitsX","ES+Front residualX", 40,-125,125,40,-125,125 );
+    ESpF_2DhitsY=f->make<TH2D>("ESpF_2DhitsY","ES+Front residualY", 40,-125,125,40,-125,125 );
+    ESpR_2DhitsX=f->make<TH2D>("ESpR_2DhitsX","ES+Rear residualX" , 40,-125,125,40,-125,125 );
+    ESpR_2DhitsY=f->make<TH2D>("ESpR_2DhitsY","ES+Rear residualY" , 40,-125,125,40,-125,125 );
+    ESmF_2DhitsX=f->make<TH2D>("ESmF_2DhitsX","ES-Front residualX", 40,-125,125,40,-125,125 );
+    ESmF_2DhitsY=f->make<TH2D>("ESmF_2DhitsY","ES-Front residualY", 40,-125,125,40,-125,125 );
+    ESmR_2DhitsX=f->make<TH2D>("ESmR_2DhitsX","ES-Rear residualX" , 40,-125,125,40,-125,125 );
+    ESmR_2DhitsY=f->make<TH2D>("ESmR_2DhitsY","ES-Rear residualY" , 40,-125,125,40,-125,125 );
+
+   
+    ESpF_2DresidualX=f->make<TH2D>("ESpF_2DresidualX","ES+Front residualX", 40,-125,125,40,-125,125 ); 
+    ESpF_2DresidualY=f->make<TH2D>("ESpF_2DresidualY","ES+Front residualY", 40,-125,125,40,-125,125 );
+    ESpR_2DresidualX=f->make<TH2D>("ESpR_2DresidualX","ES+Rear residualX" , 40,-125,125,40,-125,125 );
+    ESpR_2DresidualY=f->make<TH2D>("ESpR_2DresidualY","ES+Rear residualY" , 40,-125,125,40,-125,125 );
+    ESmF_2DresidualX=f->make<TH2D>("ESmF_2DresidualX","ES-Front residualX", 40,-125,125,40,-125,125 );
+    ESmF_2DresidualY=f->make<TH2D>("ESmF_2DresidualY","ES-Front residualY", 40,-125,125,40,-125,125 );
+    ESmR_2DresidualX=f->make<TH2D>("ESmR_2DresidualX","ES-Rear residualX" , 40,-125,125,40,-125,125 );
+    ESmR_2DresidualY=f->make<TH2D>("ESmR_2DresidualY","ES-Rear residualY" , 40,-125,125,40,-125,125 );
+
+    ESpF_fabs2DresidualX=f->make<TH2D>("ESpF_fabs2DresidualX","ES+Front residualX",40,-125,125,40,-125,125 );
+    ESpF_fabs2DresidualY=f->make<TH2D>("ESpF_fabs2DresidualY","ES+Front residualY",40,-125,125,40,-125,125 );
+    ESpR_fabs2DresidualX=f->make<TH2D>("ESpR_fabs2DresidualX","ES+Rear residualX", 40,-125,125,40,-125,125 );
+    ESpR_fabs2DresidualY=f->make<TH2D>("ESpR_fabs2DresidualY","ES+Rear residualY", 40,-125,125,40,-125,125 );
+    ESmF_fabs2DresidualX=f->make<TH2D>("ESmF_fabs2DresidualX","ES-Front residualX",40,-125,125,40,-125,125 );
+    ESmF_fabs2DresidualY=f->make<TH2D>("ESmF_fabs2DresidualY","ES-Front residualY",40,-125,125,40,-125,125 );
+    ESmR_fabs2DresidualX=f->make<TH2D>("ESmR_fabs2DresidualX","ES-Rear residualX", 40,-125,125,40,-125,125 );
+    ESmR_fabs2DresidualY=f->make<TH2D>("ESmR_fabs2DresidualY","ES-Rear residualY", 40,-125,125,40,-125,125 );
+
+
+
 }
 void ESAlignTool::UnAligned_Original( int iz, int ip, PositionType* plan){
     ES_O_X[iz][ip]=plan->x(); 
@@ -1400,8 +1450,15 @@ void ESAlignTool::fill_residual(int iz)
                 +(PredictionState_Z[iTrk][a][1]-ES_Oap_Z[a][1])*ES_R23[a][1];
             if(check_DeadZone(iz,2,X0R,Y0R)==0) continue;
             if(check_Radius(X0R,Y0R)==0) continue;
+/////////////////
+//////////////////////
 
-            Double_t disF=(winlimit*winlimit); int indF=-1;
+
+
+            Double_t Xarray0=0.;
+            Double_t Yarray0=0.;
+
+            Double_t disF=(winlimit*winlimit); int indF=-1; 
             Double_t resiXF,resiYF,resiXR,resiYR;
             resiXF=30.; resiYF=30.; resiXR=30.; resiYR=30.;
             for(int irec=0;irec<Nesrh;irec++)// recoHits from global to local, for first plane
@@ -1417,14 +1474,26 @@ void ESAlignTool::fill_residual(int iz)
                 Y= (_esRecHit_X[irec]-ES_O_X[a][0])*ES_O_R21[a][0]
                     +(_esRecHit_Y[irec]-ES_O_Y[a][0])*ES_O_R22[a][0]
                     +(_esRecHit_Z[irec]-ES_O_Z[a][0])*ES_O_R23[a][0];
+
                 if( fabs(X-X0F)>winlimit ) continue;
                 if( fabs(Y-Y0F)>winlimit ) continue;
                 Double_t buf = pow(X-X0F,2.)+pow(Y-Y0F,2.);
                 if(buf<disF) //Find the cloest predicted hit one in local coordinate
-                { indF=irec; disF=buf; resiXF=X0F-X; resiYF=Y0F-Y; }
+                { indF=irec; disF=buf; resiXF=X0F-X; resiYF=Y0F-Y; 
+                Xarray0=X; 
+                Yarray0=Y;
+}
+
+
+
             }//end for-loop ESrechit
 
+        Double_t Xarray1=0.;
+        Double_t Yarray1=0.;
+
             Double_t disR=(winlimit*winlimit); int indR=-1;
+
+
             for(int irec=0;irec<Nesrh;irec++)// recoHits from global to local, for second plane
             {	
                 if(_esRecHit_siZ[irec]!=iz||_esRecHit_siP[irec]!=2) continue;
@@ -1436,14 +1505,20 @@ void ESAlignTool::fill_residual(int iz)
                     +(_esRecHit_Y[irec]-ES_O_Y[a][1])*ES_O_R12[a][1]
                     +(_esRecHit_Z[irec]-ES_O_Z[a][1])*ES_O_R13[a][1];
                 Y= (_esRecHit_X[irec]-ES_O_X[a][1])*ES_O_R21[a][1]
-                    +(_esRecHit_Y[irec]-ES_O_Y[a][1])*ES_O_R22[a][1]
-                    +(_esRecHit_Z[irec]-ES_O_Z[a][1])*ES_O_R23[a][1];
-                if( fabs(X-X0R)>winlimit) continue;
+                    +(_esRecHit_Y[irec]-ES_O_Y[a][1])*ES_O_R22[a][1];
+                
+		if( fabs(X-X0R)>winlimit) continue;
                 if( fabs(Y-Y0R)>winlimit) continue;
                 Double_t buf = pow(X-X0R,2.)+pow(Y-Y0R,2.);
                 if(buf<disR)//Find the cloest predicted hit one in local coordinate
-                { indR=irec; disR=buf; resiXR=X0R-X; resiYR=Y0R-Y; }
-            }//end for-loop ESrechita
+                { indR=irec; disR=buf; resiXR=X0R-X; resiYR=Y0R-Y; 
+                Xarray1=X;
+                Yarray1=Y;
+		}
+
+
+
+           }//end for-loop ESrechita
 
             if(indF>-1&&_esRecHit_Noisy[indF]==0&&indR>-1&&_esRecHit_Noisy[indR]==0
                     && BadSensor(_esRecHit_siZ[indF],_esRecHit_siP[indF],_esRecHit_siX[indF],_esRecHit_siY[indF])==0
@@ -1457,12 +1532,93 @@ void ESAlignTool::fill_residual(int iz)
                 {
                     ESpF_residualX->Fill(PredictionState_resiX[iTrk][a][0]);
                     ESpF_residualY->Fill(PredictionState_resiY[iTrk][a][0]);
-                }
+                    ESpF_2DhitsX->Fill(Xarray0,Yarray0,1);
+                    ESpF_2DhitsY->Fill(Xarray0,Yarray0,1);
+                    ESpF_2DresidualX->Fill(Xarray0,Yarray0,PredictionState_resiX[iTrk][a][0]);
+                    ESpF_2DresidualY->Fill(Xarray0,Yarray0,PredictionState_resiY[iTrk][a][0]);
+                //    ESpF_fabs2DresidualX->Fill(Xarray0,Yarray0,PredictionState_resiX[iTrk][a][0]);
+                //    ESpF_fabs2DresidualY->Fill(Xarray0,Yarray0,PredictionState_resiY[iTrk][a][0]);
+
+                    if(Xarray0 > 0&& Yarray0 > 0 && fabs(Xarray0) > fabs(Yarray0))
+                    {
+                    ESpF_residualXright->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 < 0&& Yarray0 > 0 && fabs(Xarray0) > fabs(Yarray0))
+                    {
+                    ESpF_residualXleft->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 < 0&& Yarray0 < 0 && fabs(Xarray0) > fabs(Yarray0))
+                    {
+                    ESpF_residualXleft->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 > 0&& Yarray0 < 0 && fabs(Xarray0) > fabs(Yarray0))
+                    {
+                    ESpF_residualXright->Fill(PredictionState_resiX[iTrk][a][0]);
+		    }
+                    if(Xarray0 > 0&& Yarray0 > 0 && fabs(Xarray0) < fabs(Yarray0))
+                    {
+                    ESpF_residualXup->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 < 0&& Yarray0 > 0 && fabs(Xarray0) < fabs(Yarray0))
+                    {
+                    ESpF_residualXup->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 < 0&& Yarray0 < 0 && fabs(Xarray0) < fabs(Yarray0))
+                    {
+                    ESpF_residualXdown->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 > 0&& Yarray0 < 0 && fabs(Xarray0) < fabs(Yarray0))
+                    {
+                    ESpF_residualXdown->Fill(PredictionState_resiX[iTrk][a][0]);
+		    }
+ 
+		}
                 if(a==0)
                 {
                     ESmF_residualX->Fill(PredictionState_resiX[iTrk][a][0]);
                     ESmF_residualY->Fill(PredictionState_resiY[iTrk][a][0]);
-                }
+                    ESmF_2DhitsX->Fill(Xarray0,Yarray0,1);
+                    ESmF_2DhitsY->Fill(Xarray0,Yarray0,1);
+                    ESmF_2DresidualX->Fill(Xarray0,Yarray0,PredictionState_resiX[iTrk][a][0]);
+                    ESmF_2DresidualY->Fill(Xarray0,Yarray0,PredictionState_resiY[iTrk][a][0]);
+              //      ESmF_fabs2DresidualX->Fill(Xarray0,Yarray0,PredictionState_resiX[iTrk][a][0]);
+              //      ESmF_fabs2DresidualY->Fill(Xarray0,Yarray0,PredictionState_resiY[iTrk][a][0]);
+  
+                    if(Xarray0 > 0&& Yarray0 > 0 && fabs(Xarray0) > fabs(Yarray0))
+                    {
+                    ESmF_residualXright->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 < 0&& Yarray0 > 0 && fabs(Xarray0) > fabs(Yarray0))
+                    {
+                    ESmF_residualXleft->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 < 0&& Yarray0 < 0 && fabs(Xarray0) > fabs(Yarray0))
+                    {
+                    ESmF_residualXleft->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 > 0&& Yarray0 < 0 && fabs(Xarray0) > fabs(Yarray0))
+                    {
+                    ESmF_residualXright->Fill(PredictionState_resiX[iTrk][a][0]);
+		    }
+                    if(Xarray0 > 0&& Yarray0 > 0 && fabs(Xarray0) < fabs(Yarray0))
+                    {
+                    ESmF_residualXup->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 < 0&& Yarray0 > 0 && fabs(Xarray0) < fabs(Yarray0))
+                    {
+                    ESmF_residualXup->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 < 0&& Yarray0 < 0 && fabs(Xarray0) < fabs(Yarray0))
+                    {
+                    ESmF_residualXdown->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+                    if(Xarray0 > 0&& Yarray0 < 0 && fabs(Xarray0) < fabs(Yarray0))
+                    {
+                    ESmF_residualXdown->Fill(PredictionState_resiX[iTrk][a][0]);
+                    }
+
+
+		}
                 Double_t XDF=PredictionState_resiX[iTrk][a][0];
                 Double_t YDF=PredictionState_resiY[iTrk][a][0];
 
@@ -1485,11 +1641,95 @@ void ESAlignTool::fill_residual(int iz)
                 {
                     ESpR_residualX->Fill(PredictionState_resiX[iTrk][a][1]);
                     ESpR_residualY->Fill(PredictionState_resiY[iTrk][a][1]);
-                }
+                    ESpR_2DhitsX->Fill(Xarray1,Yarray1,1);
+                    ESpR_2DhitsY->Fill(Xarray1,Yarray1,1);
+                    ESpR_2DresidualX->Fill(Xarray1,Yarray1,PredictionState_resiX[iTrk][a][1]);
+                    ESpR_2DresidualY->Fill(Xarray1,Yarray1,PredictionState_resiY[iTrk][a][1]);
+              //      ESpR_fabs2DresidualX->Fill(Xarray1,Yarray1,PredictionState_resiX[iTrk][a][1]);
+              //      ESpR_fabs2DresidualY->Fill(Xarray1,Yarray1,PredictionState_resiY[iTrk][a][1]);
+
+                   
+                    if(Xarray1 > 0&& Yarray1 > 0 && fabs(Xarray1) > fabs(Yarray1))
+                    {
+                    ESpR_residualYright->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 < 0&& Yarray1 > 0 && fabs(Xarray1) > fabs(Yarray1))
+                    {
+                    ESpR_residualYleft->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 < 0&& Yarray1 < 0 && fabs(Xarray1) > fabs(Yarray1))
+                    {
+                    ESpR_residualYleft->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 > 0&& Yarray1 < 0 && fabs(Xarray1) > fabs(Yarray1))
+                    {
+                    ESpR_residualYright->Fill(PredictionState_resiY[iTrk][a][1]);
+                    } 
+		    if(Xarray1 > 0&& Yarray1 > 0 && fabs(Xarray1) < fabs(Yarray1))
+                    {
+                    ESpR_residualYup->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 < 0&& Yarray1 > 0 && fabs(Xarray1) < fabs(Yarray1))
+                    {
+                    ESpR_residualYup->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 < 0&& Yarray1 < 0 && fabs(Xarray1) < fabs(Yarray1))
+                    {
+                    ESpR_residualYdown->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 > 0&& Yarray1 < 0 && fabs(Xarray1) < fabs(Yarray1))
+                    {
+                    ESpR_residualYdown->Fill(PredictionState_resiY[iTrk][a][1]); 
+		    }
+
+		}
                 if(a==0)
                 {
                     ESmR_residualX->Fill(PredictionState_resiX[iTrk][a][1]);
                     ESmR_residualY->Fill(PredictionState_resiY[iTrk][a][1]);
+                    ESmR_2DhitsX->Fill(Xarray1,Yarray1,1);
+                    ESmR_2DhitsY->Fill(Xarray1,Yarray1,1);
+                    ESmR_2DresidualX->Fill(Xarray1,Yarray1,PredictionState_resiX[iTrk][a][1]);
+                    ESmR_2DresidualY->Fill(Xarray1,Yarray1,PredictionState_resiY[iTrk][a][1]);
+            //        ESmR_fabs2DresidualX->Fill(Xarray1,Yarray1,PredictionState_resiX[iTrk][a][1]);
+            //        ESmR_fabs2DresidualY->Fill(Xarray1,Yarray1,PredictionState_resiY[iTrk][a][1]);
+
+                    if(Xarray1 > 0&& Yarray1 > 0 && fabs(Xarray1) > fabs(Yarray1))
+                    {
+                    ESmR_residualYright->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 < 0&& Yarray1 > 0 && fabs(Xarray1) > fabs(Yarray1))
+                    {
+                    ESmR_residualYleft->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 < 0&& Yarray1 < 0 && fabs(Xarray1) > fabs(Yarray1))
+                    {
+                    ESmR_residualYleft->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 > 0&& Yarray1 < 0 && fabs(Xarray1) > fabs(Yarray1))
+                    {
+                    ESmR_residualYright->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+    		    if(Xarray1 > 0&& Yarray1 > 0 && fabs(Xarray1) < fabs(Yarray1))
+                    {
+                    ESmR_residualYup->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 < 0&& Yarray1 > 0 && fabs(Xarray1) < fabs(Yarray1))
+                    {
+                    ESmR_residualYup->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 < 0&& Yarray1 < 0 && fabs(Xarray1) < fabs(Yarray1))
+                    {
+                    ESmR_residualYdown->Fill(PredictionState_resiY[iTrk][a][1]);
+                    }
+                    if(Xarray1 > 0&& Yarray1 < 0 && fabs(Xarray1) < fabs(Yarray1))
+                    {
+                    ESmR_residualYdown->Fill(PredictionState_resiY[iTrk][a][1]);
+		    }
+
+
+                    
+
                 }
                 Double_t XDR=PredictionState_resiX[iTrk][a][1];
                 Double_t YDR=PredictionState_resiY[iTrk][a][1];
@@ -1506,10 +1746,48 @@ void ESAlignTool::fill_residual(int iz)
                 }
 
             }//end if good matching
+
         }//end for-loop Trk
 
     }//iz==1 or -1
+/*
+for(int x=1 ; x <= 40 ; x++){
+for(int y=1 ; y <= 40 ; y++){
+
+
+ESpF_fabs2DresidualX->SetBinContent(x,y,get_absoluteBinContent(ESpF_2DresidualX,x,y));
+ESpF_fabs2DresidualY->SetBinContent(x,y,get_absoluteBinContent(ESpF_2DresidualY,x,y));
+ESmF_fabs2DresidualX->SetBinContent(x,y,get_absoluteBinContent(ESmF_2DresidualX,x,y));
+ESmF_fabs2DresidualY->SetBinContent(x,y,get_absoluteBinContent(ESmF_2DresidualY,x,y));
+ESpR_fabs2DresidualX->SetBinContent(x,y,get_absoluteBinContent(ESpR_2DresidualX,x,y));
+ESpR_fabs2DresidualY->SetBinContent(x,y,get_absoluteBinContent(ESpR_2DresidualY,x,y));
+ESmR_fabs2DresidualX->SetBinContent(x,y,get_absoluteBinContent(ESmR_2DresidualX,x,y));
+ESmR_fabs2DresidualY->SetBinContent(x,y,get_absoluteBinContent(ESmR_2DresidualY,x,y));
 }
+}
+*/
+
+
+
+}
+
+double ESAlignTool::get_absoluteBinContent(TH2D* input, Double_t x, Double_t y)
+{
+   double result =0;
+   double plot_bin = input->GetBinContent(x,y);
+   if(plot_bin>0)
+   {
+       result = plot_bin;
+   }
+   else
+   {
+      result = -plot_bin;
+   }
+
+    return result;
+
+}
+
 
 int ESAlignTool::check_Radius(Double_t X, Double_t Y)
 {

@@ -39,7 +39,7 @@
 #include <TH1F.h>
 #include <TH1D.h>
 #include <TH2F.h>
-
+#include <TH2D.h>
 //
 // class declaration
 //
@@ -206,6 +206,43 @@ class ESAlignTool : public edm::EDAnalyzer  // public edm::EDAnalyzer
         TH1D *ESmF_residualX;   TH1D *ESmF_residualY;
         TH1D *ESmR_residualX;   TH1D *ESmR_residualY;
 
+        TH1D *ESpF_residualXright;  
+        TH1D *ESpR_residualYright;
+        TH1D *ESmF_residualXright;    
+        TH1D *ESmR_residualYright;
+   
+        TH1D *ESpF_residualXleft;  
+        TH1D *ESpR_residualYleft;
+        TH1D *ESmF_residualXleft;           
+        TH1D *ESmR_residualYleft;
+   
+        TH1D *ESpF_residualXup;  
+        TH1D *ESpR_residualYup;
+        TH1D *ESmF_residualXup;           
+        TH1D *ESmR_residualYup;
+   
+        TH1D *ESpF_residualXdown;  
+        TH1D *ESpR_residualYdown;
+        TH1D *ESmF_residualXdown;           
+        TH1D *ESmR_residualYdown;
+
+
+        TH2D *ESpF_2DhitsX;   TH2D *ESpF_2DhitsY;
+        TH2D *ESpR_2DhitsX;   TH2D *ESpR_2DhitsY;
+        TH2D *ESmF_2DhitsX;   TH2D *ESmF_2DhitsY;
+        TH2D *ESmR_2DhitsX;   TH2D *ESmR_2DhitsY;
+
+
+        TH2D *ESpF_2DresidualX;   TH2D *ESpF_2DresidualY;
+        TH2D *ESpR_2DresidualX;   TH2D *ESpR_2DresidualY;
+        TH2D *ESmF_2DresidualX;   TH2D *ESmF_2DresidualY;
+        TH2D *ESmR_2DresidualX;   TH2D *ESmR_2DresidualY;          
+
+        TH2D *ESpF_fabs2DresidualX;   TH2D *ESpF_fabs2DresidualY;
+        TH2D *ESpR_fabs2DresidualX;   TH2D *ESpR_fabs2DresidualY;
+        TH2D *ESmF_fabs2DresidualX;   TH2D *ESmF_fabs2DresidualY;
+        TH2D *ESmR_fabs2DresidualX;   TH2D *ESmR_fabs2DresidualY;
+
     private:
         int check_Radius(Double_t, Double_t);
         int check_DeadZone(int, int, Double_t, Double_t);
@@ -244,6 +281,8 @@ class ESAlignTool : public edm::EDAnalyzer  // public edm::EDAnalyzer
         Double_t iter_ESmFdAlpha[11], iter_ESmFdBeta[11], iter_ESmFdGamma[11];
         Double_t iter_ESmRdAlpha[11], iter_ESmRdBeta[11], iter_ESmRdGamma[11];
 
+        // page renew
+        double get_absoluteBinContent(TH2D*, Double_t, Double_t);        
 
         int iterN;
 
