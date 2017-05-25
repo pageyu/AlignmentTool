@@ -1,1 +1,0 @@
-HLEPhysics_00 250 /eos/cms/store/group/dpg_ecal/alca_ecalcalib/ESAlignment/ESALCALRECO_CMSSW_8_0_7_patch3_v2/HLTPhysics/trackRefit/HLEPhysics_00 InputRefitter=False TrackLabel=ecalAlCaESAlignTrackReducer  IterN=2
